@@ -1,6 +1,6 @@
 # Sample Oracle NetSuite API query with OAuth1
 # Azure Databricks Edition
-# version 1.1 / 2022-09-26 / AlexO 
+# version 1.1.1 / 2022-09-27 (2022-08-22) / AlexO 
 
 from ntpath import join
 import uuid
@@ -25,10 +25,11 @@ OAUTH_TIMESTAMP = round(time.time())
 # Some NetSuite versions (old?) require 11-char long nonce (no hard proof; just googled it; maybe obs Customer-specific authenication olete)
 OAUTH_NONCE_LENGTH = 11
 OAUTH_NONCE = uuid.uuid4().hex[:OAUTH_NONCE_LENGTH]
-OAUTH_CONSUMER_KEY = ''
-OAUTH_CONSUMER_SECRET = ''
-OAUTH_TOKEN_ID = ''
-OAUTH_TOKEN_SECRET = ''
+# The secrets below are illustratory
+OAUTH_CONSUMER_KEY = 'sBr4WL8ujijEZdQpqnihiBHYMSJfHU5a'
+OAUTH_CONSUMER_SECRET = '6lARbXY2GApLYYfYwE9wPKF3ljNH4qCY'
+OAUTH_TOKEN_ID = 'RaqxokDGxAJ7HJj2CpmO1XlFcfO242wK'
+OAUTH_TOKEN_SECRET = '7BeS7BLkB8I290NK3adGFr6GymeOeDm1'
 
 # Customer-specific URI
 REALM = '1234567'
